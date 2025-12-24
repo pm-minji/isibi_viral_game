@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "ko-KR"
+reviews:
+  review_status: false
+  auto_review:
+    enabled: true
+    ignore_usernames: [] # AI 및 봇이 생성한 PR도 리뷰하도록 설정
