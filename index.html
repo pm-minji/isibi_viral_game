@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Rocket Escape - To the Moon!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- UI Overlays -->
+        <div id="ui-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen">
+                <div class="glass-card">
+                    <h1>ROCKET<br><span class="highlight">ESCAPE</span></h1>
+                    <p class="description">Balance your boost. Reach the stars.</p>
+                    <button id="start-button" class="btn-primary">LAUNCH</button>
+                    <div class="instructions">Tap & Hold to Boost</div>
+                </div>
+            </div>
+
+            <!-- HUD -->
+            <div id="hud" class="hidden">
+                <div class="hud-top">
+                    <div class="altitude-container">
+                        <span class="label">ALTITUDE</span>
+                        <div id="altitude-value">0 m</div>
+                    </div>
+                </div>
+                <div class="hud-bottom">
+                    <div class="boost-meter-container">
+                        <div class="meter-label">HEAT</div>
+                        <div class="meter-track">
+                            <div id="boost-fill" class="meter-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen hidden">
+                <div class="glass-card">
+                    <h2 id="end-title">MISSION OVER</h2>
+                    <div class="final-score">
+                        <span class="label">FINAL ALTITUDE</span>
+                        <div id="final-altitude">0 km</div>
+                    </div>
+                    <button id="restart-button" class="btn-secondary">RETRY MISSION</button>
+                    <button id="share-button" class="btn-primary">SHARE RESULT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
